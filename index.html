@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .Calculator{
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .display {
+            display: flex;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: right;
+        }
+        .line-1, .line-2, .line-3, .line-4, .line-5 {
+            display: flex;
+            justify-content: center; /* จัดปุ่มในแต่ละแถวให้อยู่กลาง */
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 65px;
+            height: 50px;
+            font-size: 1em;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="Calculator">
+        <div class="display">
+            <div id="previous-operand"></div>
+            <div id="current-operand"></div>
+        </div>
+
+        <div class="line-1">
+            <button type="button" id="clear">AC</button>
+            <button type="button" id="delete">DEL</button>
+        </div>
+
+        <div class="line-2">
+            <button type="button" class="number" id="number-7">7</button>
+            <button type="button" class="number" id="number-8">8</button>
+            <button type="button" class="number" id="number-9">9</button>
+            <button type="button" class="operation" id="divide">/</button>
+        </div>
+
+        <div class="line-3">
+            <button type="button" class="number" id="number-4">4</button>
+            <button type="button" class="number" id="number-5">5</button>
+            <button type="button" class="number" id="number-6">6</button>
+            <button type="button" class="operation" id="multiply">*</button>
+        </div>
+        <div class="line-4">
+            <button type="button" class="number" id="number-3">3</button>
+            <button type="button" class="number" id="number-2">2</button>
+            <button type="button" class="number" id="number-1">1</button>
+            <button type="button" class="operation" id="subtract">-</button>
+        </div>
+
+        <div class="line-5">
+            <button type="button" class="number" id="number-0">0</button>
+            <button type="button" class="dot" id="Dot">.</button>
+            <button type="button" class="operation" id="equal">=</button>
+            <button type="button" class="operation" id="plus">+</button>
+        </div>
+        
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
